@@ -1,3 +1,9 @@
+.row>* {
+  flex-shrink: none !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-top: 0 !important;
+}
 
 header {
   background-color:  lighten(rgb(30,45,59), 10%);
@@ -10,6 +16,11 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  width: 70px;
+  height: 70px;
+}
+
+.logo img {
   width: 70px;
   height: 70px;
 }
