@@ -28,7 +28,6 @@ main {
 }
 
 .row { 
-  display: inline;
   width: 80%;
   margin: 0 auto;  
   margin-top: 55px;
@@ -36,20 +35,25 @@ main {
 
 .preview { 
   min-height: 350px;
-  height: 100%;
-  color: #ffff;
   background-color:  rgb(54, 79, 104);
   text-align: center;
-  overflow: hidden;
+
 }
  
 .preview img {
- width: 100%;
+  width: 100%;
+  padding: 12px;
 }
 
 .preview h6 {
-  font-weight: 700;
-  padding-top: 12px ;
+  color: #ffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 24px ;
+}
+
+.preview p {
+  color: rgb(91, 124, 153);
 }
 
 .choose {

@@ -7,10 +7,6 @@
 ?>
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,17 +50,17 @@
 
     <main class="d-flex">
       <div class="row d-flex">
-        <div class="col-2 preview m-3 p-3">
           <?php 
             foreach($discs as $disc){
               echo "
-              <img src='$disc[poster]' alt=''>
+              <div class='col-2 preview m-3'>
+              <img src='$disc[poster]' alt='$disc[title]'>
               <h6>$disc[title]</h6>
               <p> $disc[author] </p>
-              <p> $disc[year] </p>";
+              <p> $disc[year] </p>
+              </div>";
             }
           ?>
-        </div>
       </div>
     </main>
 
