@@ -1,0 +1,44 @@
+
+header {
+  background-color:  lighten(rgb(30,45,59), 10%);
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;  
+  margin-top: 55px;
+}
+
+.preview {
+  min-height: 350px;
+  height: 100%;
+  color: #ffff;
+  background-color:  lighten(rgb(30,45,59), 10%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.preview h6 {
+  font-weight: 700;
+  padding-top: 12px ;
+}
+
+.choose {
+  vertical-align: middle;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 32px;
+}
