@@ -20,25 +20,28 @@
         <section class="selection col-6 d-flex justify-content-end">
           <div class="col-3">
             <select
-            @change="getApi()"
+            v-model="selection"
+            @change="filteredCategories"
             class="choose" >
-              <option value="" selected>Tutti gli album</option>
+              <option 
+              value="" selected>Tutti gli album</option>
               <option
-              v-for="genre in filteredCategories()"
+              v-for="genre in discs"
               :value="genre">
-                {{genre}}
+              {{genre.genre}}
               </option>
             </select>
           </div>
           <div class="col-3">
             <select
-              @change="getApi()"
+              @change="filteredCategories"
+              v-model="select"
               class="choose" >
               <option value="" selected>Tutti gli album</option>
               <option
-              v-for="author in filteredCategories()"
-               :value="author"
-              >{{author}}</option>
+              v-for="author in discs"
+              :value="author">
+              {{author.author}}</option>
             </select>
           </div>
         </section>

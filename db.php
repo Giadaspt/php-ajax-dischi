@@ -46,7 +46,7 @@ $discs = [
   [
     "poster" => "https://images-na.ssl-images-amazon.com/images/I/51rggtPgmRL.jpg",
     "title" =>	"Deep Purple",
-    "author" => "Eric Clapton",
+    "author" => "Deep Purple",
     "genre" => "Rock",
     "year" => "1972",
   ],
@@ -74,7 +74,5 @@ $discs = [
  
 ];
 
-header('Content-Type: application/json; charset="UTF-8"');
-echo json_encode($discs);
 
 ?>
