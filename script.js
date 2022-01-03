@@ -1,20 +1,36 @@
-xmlhttp.open("POST", "db.php", true);
-xmlhttp.send();
+// xmlhttp.open("POST", "db.php", true);
+// xmlhttp.send();
 
 
 const root = new Vue ({
     el: "#root",
     
     data: {
-        image = "./img/logo-spostify.png",
-        apiUrl: "http://localhost:8888/php-ajax-dischi/",
+        logo:"./img/logo-spostify.png",
+        apiUrl: "http://localhost:8888/php-ajax-dischi/server.php?",
         file: '/db.php',
         discs: [],
+        selection: "",
+        select: "",
     },
-    mounted: {
-         
+
+    mounted() {
+        this.getApi();
+        
+    },
+
+    computed:{
+
+        
+    },
+
+    methods: {
         getApi(){
-            axios.post( this.apiUrl)
+            axios.post( this.apiUrl, {
+                params: {
+                    disc: this.disc,
+                }
+            })
             .then(r =>{
                 this.discs = r.data;
                 console.log('ciao');
@@ -23,10 +39,22 @@ const root = new Vue ({
                 console.log(e);
             })
             
-        }
-    },
+        },
 
-    methods: {
+        filteredCategories(){
+            if(this.selection === '' && this.select === '' ){
+              return this.discs;
+            }
+            return this.discs.filter( a =>{
+              let genre = a.genre  === this.selection;
+              let author = a.author === this.select;
+              let all = genre + author;
+      
+              return all ;
+          
+            })
+              
+          },
     },
 
 });
