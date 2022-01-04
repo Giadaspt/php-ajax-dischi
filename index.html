@@ -21,27 +21,27 @@
           <div class="col-3">
             <select
             v-model="selection"
-            @change="filteredCategories"
+            @change="performCategory(genreOne) "
             class="choose" >
-              <option 
-              value="" selected>Tutti gli album</option>
-              <option
-              v-for="genre in discs"
+            <option 
+            value="" selected>Tutti gli album</option>
+            <option
+              v-for="genre in genreCategory"
               :value="genre">
-              {{genre.genre}}
+              {{genre}}
               </option>
             </select>
           </div>
           <div class="col-3">
             <select
-              @change="filteredCategories"
               v-model="select"
+              @change="performCategoryArist "
               class="choose" >
               <option value="" selected>Tutti gli album</option>
               <option
-              v-for="author in discs"
+              v-for="author in authorCategory"
               :value="author">
-              {{author.author}}</option>
+              {{author}}</option>
             </select>
           </div>
         </section>
@@ -50,7 +50,7 @@
     <main class="d-flex">
       <div class="row d-flex">
         <div 
-        v-for="item in discs"
+        v-for="item in filteredCategories"
         class='col-2 preview m-3'>
           <img :src="item.poster" :alt="item.title">
           <h6>{{item.title}}</h6>
