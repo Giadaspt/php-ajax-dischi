@@ -21,7 +21,7 @@
           <div class="col-3">
             <select
             v-model="selection"
-            @change="performCategory(genreOne) "
+            @change="getApi"
             class="choose" >
             <option 
             value="" selected>Tutti gli album</option>
@@ -35,7 +35,7 @@
           <div class="col-3">
             <select
               v-model="select"
-              @change="performCategoryArist "
+              @change="getApi"
               class="choose" >
               <option value="" selected>Tutti gli album</option>
               <option
